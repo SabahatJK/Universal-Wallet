@@ -61,6 +61,8 @@ See [requirements.txt](requirements.txt) for steps to install the dependencies b
 
 # How to use the wallet
 
+To Test the wallet, run the test_wallet.py, a console app.
+
 ## Derive the wallets from seed phrase
 First the child wallets are derived using HD Wallet, using a mnemonic phase stored in the .env file
     >>
