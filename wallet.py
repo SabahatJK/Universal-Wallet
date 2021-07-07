@@ -152,8 +152,8 @@ def send_tx(coin, account, recipient, amount):
             # broadcast on the network
             NetworkAPI.broadcast_tx_testnet(signed_tx)
             # get the last transaction id
-            ''' A potential bug: this sometimes returns the transaction id of the one before the last
-            # Bug to fix '''
+            ''' This does not neccesarily return the last trabsaction id, as after the verification is completed, bitcoin miners add txid'''
+            ''' So, in most cases the an older transaction id is returned. Still a bit confused about this.'''
             result = NetworkAPI.get_transactions_testnet(account.address)[0] 
 
 
